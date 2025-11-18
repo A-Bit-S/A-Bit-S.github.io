@@ -52,12 +52,14 @@ A_Bit_S Blog 是团队的内容发布阵地，基于 Jekyll 构建。`index.html
    ---
    title: Building Scalable Systems
    slug: building-scalable-systems
+   author: Zhuxi
    description: 一本介绍分布式系统演进的长文
    cover: /assets/images/books/bss.png   # 可选
    order: 1                              # 控制书籍排序
    ---
    ```
    正文可写阅读指南或内容简介。
+   - 若书籍代表文章合集，可通过 `author` 字段标注主笔作者，README、列表与书籍页会自动展示。
 2. **章节文件**（`_chapters/<book-slug>-NN.md`）：
    ```yaml
    ---

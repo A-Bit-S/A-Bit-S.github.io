@@ -12,6 +12,11 @@ url: "https://wzxzhuxi.github.io"
 markdown: kramdown
 theme: minima
 
+# Disable Rouge syntax highlighting (using Prism.js instead)
+kramdown:
+  syntax_highlighter_opts:
+    disable: true
+
 # Plugins allowed by GitHub Pages
 plugins:
   - jekyll-feed

@@ -7,6 +7,10 @@
   <meta name="description" content="{{ page.excerpt | default: site.description | strip_html | normalize_whitespace | truncate: 160 | escape }}">
   <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" sizes="16x16" type="image/x-icon">
 
+  <!-- Prism.js Tomorrow Night Theme -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/themes/prism-tomorrow.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/toolbar/prism-toolbar.min.css">
+
   <style>
     /* Reset & Base */
     * {
@@ -187,33 +191,54 @@
       font-size: 1.5rem;
     }
 
-    /* Code Blocks - High Contrast */
-    pre {
-      background: #000;
-      color: #fff;
+    /* Code Blocks - Prism Tomorrow Night Customization */
+    pre[class*="language-"] {
       padding: 2rem;
-      overflow-x: auto;
-      border-radius: 0;
       margin: 2rem 0;
       border: 4px solid #000;
-      font-family: "SF Mono", Monaco, monospace;
+      border-radius: 0;
+      font-family: "SF Mono", Monaco, "Cascadia Code", monospace;
       font-size: 0.95rem;
       line-height: 1.6;
     }
 
-    code {
+    code[class*="language-"] {
+      font-family: "SF Mono", Monaco, "Cascadia Code", monospace;
+    }
+
+    /* Inline code */
+    :not(pre) > code {
       background: #f0f0f0;
+      color: #000;
       padding: 0.2rem 0.5rem;
       font-family: "SF Mono", Monaco, monospace;
       font-size: 0.9em;
       border: 1px solid #000;
+      border-radius: 2px;
     }
 
-    pre code {
-      background: transparent;
-      border: none;
-      padding: 0;
+    /* Prism Toolbar - Language label styling */
+    div.code-toolbar {
+      margin: 2rem 0;
+    }
+
+    div.code-toolbar > .toolbar {
+      position: absolute;
+      top: 0.5rem;
+      right: 0.5rem;
+    }
+
+    div.code-toolbar > .toolbar > .toolbar-item > span {
+      background: #000;
       color: #fff;
+      padding: 0.3rem 0.8rem;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      border: 2px solid #fff;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      box-shadow: none;
     }
 
     /* Blockquotes - Dramatic */
@@ -516,5 +541,22 @@
 
     animate();
   </script>
+
+  <!-- Prism.js Core and Plugins -->
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/toolbar/prism-toolbar.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/plugins/show-language/prism-show-language.min.js"></script>
+
+  <!-- Language support -->
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-c.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-cpp.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-csharp.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-python.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-javascript.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-typescript.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-bash.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-json.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-yaml.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/components/prism-sql.min.js"></script>
 </body>
 </html>

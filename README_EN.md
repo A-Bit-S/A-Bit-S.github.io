@@ -52,12 +52,14 @@ A_Bit_S Blog is our publishing hub built on Jekyll. Content pages (`index.html`,
    ---
    title: Building Scalable Systems
    slug: building-scalable-systems
+   author: Zhuxi
    description: A long-form series on distributed system evolution
    cover: /assets/images/books/bss.png   # Optional
    order: 1                              # Controls listing order
    ---
    ```
    Use the body for a synopsis or reading guide.
+   - When a book serves as an article collection, set the `author` field so the listings and detail page show ownership.
 2. **Chapter files** (`_chapters/<book-slug>-NN.md`):
    ```yaml
    ---
