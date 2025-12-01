@@ -1,12 +1,12 @@
 ---
 layout: post
-title: "Autoware Mission Planner 深度解析：嵌入式系统中的自动驾驶任务规划"
+title: "Autoware Mission Planner "
 author: allen.mkj
 date: 2025-12-01
 categories: [嵌入式]
 tags: [Autoware, 自动驾驶, 任务规划, C++, ROS2, 嵌入式系统]
 excerpt: 深入分析 Autoware Mission Planner 的核心机制，探讨嵌入式系统中自动驾驶任务规划的技术实现。
-cover: /assets/images/posts/2025-12-01-autoware-mission-planner-analysis/cover.png
+cover: /assets/images/posts/2025-12-01-autoware-mission-planner-analysis/mission_planner.png
 ---
 
 ## Mission Planner 
@@ -244,6 +244,5 @@ png
 2. **状态更新**：将系统状态设置为 ARRIVED
 3. **任务完成**：准备接收下一个任务
 
-## 嵌入式系统优化策略
 
 ```
