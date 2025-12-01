@@ -1,0 +1,102 @@
+# Site settings
+title: A_Bit_S Blog
+description: 愿你的生命如花朵般绽放
+author: A_Bit_S Team
+
+# GitHub Pages specific settings
+# Hosting at https://wzxzhuxi.github.io with no base prefix
+baseurl: "" # user/organization pages keep this empty
+url: "https://wzxzhuxi.github.io"
+
+# Build settings
+markdown: kramdown
+theme: minima
+
+# Disable Rouge syntax highlighting (using Prism.js instead)
+kramdown:
+  syntax_highlighter_opts:
+    disable: true
+
+# Plugins allowed by GitHub Pages
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-paginate
+
+# 预定义分类(避免混乱,团队成员只能使用这些分类)
+# 使用方法: categories: [后端开发]
+allowed_categories:
+  - 后端开发
+  - 前端开发
+  - 嵌入式
+  - 数据工程
+  - 工业控制
+  - 教程
+
+# 标签无限制,但建议使用技术名称作为标签
+# 使用方法: tags: [C++, Python, Docker]
+
+# Collections
+collections:
+  books:
+    output: true
+    permalink: /books/:name/
+  chapters:
+    output: true
+    permalink: /books/:name/
+  diaries:
+    output: true
+    permalink: /diaries/:name/
+
+# Defaults for collections and posts
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      author: A_Bit_S Team
+      permalink: /:year/:month/:day/:title/
+  - scope:
+      path: ""
+      type: books
+    values:
+      layout: book
+  - scope:
+      path: ""
+      type: chapters
+    values:
+      layout: chapter
+  - scope:
+      path: ""
+      type: diaries
+    values:
+      layout: diary
+
+# Pagination
+paginate: 6
+paginate_path: "/page/:num/"
+
+# Navigation
+header_pages:
+  - team.md
+  - authors.md
+  - books.md
+  - diaries.md
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/
+  - .gitignore
+  - .bundle/
+  - README.md
+  - README_EN.md
+  - QUICK_START.md
+  - HOW_TO_ADD.md
+  - CLAUDE.md
+  - CONTRIBUTING.md
+  - ARCHITECTURE_IMPROVEMENTS.md
+  - LICENSE
