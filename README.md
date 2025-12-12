@@ -70,8 +70,13 @@ bundle exec jekyll doctor
 │   ├── phli.md
 │   └── author-key.md
 ├── _layouts/                 # 页面布局模板
+├── _includes/                # 可复用组件
+│   ├── pdf.html              # PDF 嵌入组件
+│   └── video.html            # 视频嵌入组件
 ├── assets/
 │   ├── css/style.scss        # 全局样式
+│   ├── pdf/                  # PDF.js 查看器
+│   ├── docs/                 # PDF 文档存放目录
 │   └── images/               # 图片资源
 │       ├── authors/          # 作者头像
 │       ├── posts/YYYY-MM-DD-slug/  # 文章图片(按文章分目录)
@@ -229,6 +234,40 @@ assets/images/
 - 代码块必须标注语言: ` ```python `, ` ```c++ `
 - 图片使用绝对路径: `/assets/images/posts/...`
 - Front matter 使用 `snake_case`: `reading_time`, `cover_alt`
+
+## 媒体嵌入
+
+### PDF 文档
+
+使用 PDF.js 在页面内嵌入 PDF 文档:
+
+```liquid
+{% include pdf.html src="/assets/docs/example.pdf" %}
+```
+
+组件会自动调整高度以显示完整的一页 PDF（A4 比例）。
+
+PDF 文件存放位置: `assets/docs/`
+
+### 视频嵌入
+
+支持 YouTube、Bilibili 和自托管视频:
+
+```liquid
+{%- comment -%} YouTube {%- endcomment -%}
+{% include video.html platform="youtube" id="dQw4w9WgXcQ" %}
+
+{%- comment -%} Bilibili {%- endcomment -%}
+{% include video.html platform="bilibili" id="BV1GJ411x7h7" %}
+
+{%- comment -%} 自托管/外部链接 {%- endcomment -%}
+{% include video.html src="https://example.com/video.mp4" %}
+
+{%- comment -%} 带标题说明 {%- endcomment -%}
+{% include video.html platform="youtube" id="xxx" caption="视频说明文字" %}
+```
+
+**推荐**: 视频优先使用 YouTube/Bilibili 外链,避免占用仓库空间。
 
 ## Git 提交规范
 

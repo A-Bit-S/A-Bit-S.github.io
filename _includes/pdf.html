@@ -1,0 +1,28 @@
+{% comment %}
+PDF Viewer Component
+Usage: {% include pdf.html src="/assets/docs/example.pdf" %}
+
+Parameters:
+  - src: PDF file path (required)
+  - title: accessible title (optional, default: "PDF Viewer")
+
+Note: Height auto-adjusts to show one full A4 page (with toolbar)
+{% endcomment %}
+
+{% assign pdf_title = include.title | default: "PDF Viewer" %}
+
+<div class="pdf-embed" style="margin: 2rem 0;">
+  <iframe
+    src="/assets/pdf/viewer.html?file={{ include.src | url_encode }}"
+    width="100%"
+    style="border: 4px solid #000; background: #525659; aspect-ratio: 1 / 1.5;"
+    title="{{ pdf_title }}"
+    loading="lazy"
+    allowfullscreen>
+  </iframe>
+  <div style="margin-top: 0.5rem; font-size: 0.85rem; opacity: 0.7;">
+    <a href="{{ include.src }}" download style="color: #000;">Download PDF</a>
+    &nbsp;|&nbsp;
+    <a href="/assets/pdf/viewer.html?file={{ include.src | url_encode }}" target="_blank" style="color: #000;">Open in new tab</a>
+  </div>
+</div>

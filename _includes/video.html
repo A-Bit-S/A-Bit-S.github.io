@@ -1,0 +1,58 @@
+{% comment %}
+Video Embed Component
+Usage:
+  YouTube:  {% include video.html platform="youtube" id="VIDEO_ID" %}
+  Bilibili: {% include video.html platform="bilibili" id="BV1xxxxx" %}
+  Generic:  {% include video.html src="https://example.com/video.mp4" %}
+
+Parameters:
+  - platform: "youtube" or "bilibili" (optional)
+  - id: video ID for the platform (required if platform is set)
+  - src: direct video URL (for self-hosted or other platforms)
+  - height: height in px (optional, default: 480)
+  - title: accessible title (optional)
+{% endcomment %}
+
+{% assign video_height = include.height | default: 480 %}
+{% assign video_title = include.title | default: "Video Player" %}
+
+<div class="video-embed" style="margin: 2rem 0;">
+  <div style="position: relative; width: 100%; padding-bottom: 56.25%; height: 0; overflow: hidden; border: 4px solid #000;">
+    {% if include.platform == "youtube" %}
+      <iframe
+        src="https://www.youtube.com/embed/{{ include.id }}?autoplay=0"
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
+        title="{{ video_title }}"
+        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        loading="lazy">
+      </iframe>
+    {% elsif include.platform == "bilibili" %}
+      <iframe
+        src="//player.bilibili.com/player.html?bvid={{ include.id }}&high_quality=1&danmaku=0&autoplay=0"
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
+        title="{{ video_title }}"
+        allowfullscreen
+        loading="lazy"
+        scrolling="no">
+      </iframe>
+    {% elsif include.src %}
+      <video
+        controls
+        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"
+        preload="metadata">
+        <source src="{{ include.src }}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    {% else %}
+      <p style="padding: 2rem; text-align: center; color: #666;">
+        Video configuration error. Please specify platform+id or src.
+      </p>
+    {% endif %}
+  </div>
+  {% if include.caption %}
+    <p style="margin-top: 0.5rem; font-size: 0.85rem; opacity: 0.7; text-align: center;">
+      {{ include.caption }}
+    </p>
+  {% endif %}
+</div>

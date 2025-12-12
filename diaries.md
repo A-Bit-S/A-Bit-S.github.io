@@ -18,19 +18,19 @@ permalink: /diaries/
 
         {% if author_diaries.size > 0 %}
           <article class="diary-book-card">
-          <div class="diary-book-header">
-            <h2>
-              <a href="/diaries/{{ author_key }}/">
-                {{ author_data.display_name }}的日记本
-              </a>
-            </h2>
-            <p class="author-bio">{{ author_data.bio }}</p>
-            <p class="diary-count">{{ author_diaries.size }} 篇日志</p>
-          </div>
-          <a href="/diaries/{{ author_key }}/" class="view-diaries">查看日记 →</a>
-        </article>
-      {% endif %}
-    {% endunless %}
+            <div class="diary-book-header">
+              <h2>
+                <a href="/diaries/{{ author_key }}/">
+                  {{ author_data.display_name }}的日记本
+                </a>
+              </h2>
+              <p class="author-bio">{{ author_data.bio }}</p>
+              <p class="diary-count">{{ author_diaries.size }} 篇日志</p>
+            </div>
+            <a href="/diaries/{{ author_key }}/" class="view-diaries">查看日记 →</a>
+          </article>
+        {% endif %}
+      {% endunless %}
     {% endfor %}
   </div>
 </section>
