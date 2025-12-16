@@ -20,8 +20,8 @@
 
 ```bash
 # 1. 克隆仓库
-git clone https://github.com/wzxzhuxi/wzxzhuxi.github.io.git
-cd wzxzhuxi.github.io
+git clone https://github.com/A-Bit-S/A-Bit-S.github.io.git
+cd A-Bit-S.github.io
 
 # 2. 安装依赖
 bundle install
@@ -394,7 +394,7 @@ git push origin main
    - 查看 Actions 页面确认构建成功
 
 3. **访问网站验证**
-   - 访问 `https://wzxzhuxi.github.io/`
+   - 访问 `https://a-bit-s.github.io/`
    - 检查新内容是否正确显示
 
 ---

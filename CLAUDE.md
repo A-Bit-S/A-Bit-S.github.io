@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-A_Bit_S Blog is a Jekyll-based publishing platform for technical content, primarily in Chinese. The site features both individual blog posts and serialized book-length content (books with chapters). It's deployed to GitHub Pages at `https://wzxzhuxi.github.io/`.
+A_Bit_S Blog is a Jekyll-based publishing platform for technical content, primarily in Chinese. The site features both individual blog posts and serialized book-length content (books with chapters). It's deployed to GitHub Pages at `https://a-bit-s.github.io/`.
 
 ## Core Commands
 

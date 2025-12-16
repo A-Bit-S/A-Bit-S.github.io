@@ -4,7 +4,7 @@
 
 ## Project Overview
 
-A_Bit_S Blog is a technical content publishing platform for the team, built on Jekyll and deployed on GitHub Pages (`https://wzxzhuxi.github.io/`).
+A_Bit_S Blog is a technical content publishing platform for the team, built on Jekyll and deployed on GitHub Pages (`https://a-bit-s.github.io/`).
 
 It supports two content formats: articles and books (multi-chapter long-form content), with a unified author data management system for multi-author collaboration.
 
@@ -167,21 +167,24 @@ See `assets/images/README.md` for details.
 
 ## Git Commit Standards
 
+Using [Conventional Commits](https://www.conventionalcommits.org/) specification:
+
 ```bash
 # Format
-[type] Brief description
+type: Brief description
 
 # Type tags
-[feat]     # New content (article, book, feature)
-[fix]      # Bug fixes (links, format, typos)
-[docs]     # Documentation updates
-[style]    # Style adjustments
-[refactor] # Refactoring
-[chore]    # Miscellaneous
+feat:     # New content (article, book, feature)
+fix:      # Bug fixes (links, format, typos)
+docs:     # Documentation updates
+style:    # Style adjustments
+refactor: # Refactoring
+chore:    # Miscellaneous (config, dependencies)
 
 # Examples
-git commit -m "[feat] Add article: Rust Ownership Explained"
-git commit -m "[fix] Fix broken image links"
+git commit -m "feat: Add article Rust Ownership Explained"
+git commit -m "fix: Fix broken image links"
+git commit -m "chore: Update site URL"
 ```
 
 ## Deployment
@@ -190,7 +193,7 @@ The project deploys automatically via GitHub Pages:
 
 1. Push to `main` branch
 2. GitHub Actions builds automatically
-3. Publishes to `https://wzxzhuxi.github.io/`
+3. Publishes to `https://a-bit-s.github.io/`
 
 **Note**:
 - `_site/` directory is build output, excluded by `.gitignore`

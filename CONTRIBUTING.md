@@ -13,11 +13,11 @@
 # 在 GitHub 上点击 Fork 按钮
 
 # 2. Clone 到本地
-git clone https://github.com/YOUR_USERNAME/wzxzhuxi.github.io.git
-cd wzxzhuxi.github.io
+git clone https://github.com/YOUR_USERNAME/A-Bit-S.github.io.git
+cd A-Bit-S.github.io
 
 # 3. 配置上游仓库
-git remote add upstream https://github.com/wzxzhuxi/wzxzhuxi.github.io.git
+git remote add upstream https://github.com/A-Bit-S/A-Bit-S.github.io.git
 
 # 4. 创建功能分支
 git checkout -b add-my-article
@@ -28,7 +28,7 @@ nano _posts/2025/2025-01-18-article-title.md
 
 # 6. 提交（参考下方 Commit 规范）
 git add .
-git commit -m "[feat] 添加文章标题"
+git commit -m "feat: 添加文章标题"
 
 # 7. 推送到你的 Fork
 git push origin add-my-article
@@ -42,8 +42,8 @@ git push origin add-my-article
 
 ```bash
 # 1. Clone 原始仓库
-git clone https://github.com/wzxzhuxi/wzxzhuxi.github.io.git
-cd wzxzhuxi.github.io
+git clone https://github.com/A-Bit-S/A-Bit-S.github.io.git
+cd A-Bit-S.github.io
 
 # 2. 创建功能分支
 git checkout -b add-my-article
@@ -53,7 +53,7 @@ nano _posts/2025/2025-01-18-my-article.md
 
 # 4. 提交并推送
 git add .
-git commit -m "[feat] 添加我的文章"
+git commit -m "feat: 添加我的文章"
 git push origin add-my-article
 
 # 5. 创建 Pull Request（推荐）
@@ -303,8 +303,8 @@ std::vector<int> v = {{1, 2, 3}};
 ## 获取帮助
 
 - **文档**：[CLAUDE.md](./CLAUDE.md)
-- **仓库**：[https://github.com/wzxzhuxi/wzxzhuxi.github.io](https://github.com/wzxzhuxi/wzxzhuxi.github.io)
-- **联系**：[@wzxzhuxi](https://github.com/wzxzhuxi)
+- **仓库**：[https://github.com/A-Bit-S/A-Bit-S.github.io](https://github.com/A-Bit-S/A-Bit-S.github.io)
+- **联系**：[@A-Bit-S](https://github.com/A-Bit-S)
 
 ---
 
@@ -365,7 +365,7 @@ assets/images/
 - [ ] 图片路径正确且显示正常
 
 ### Git 规范
-- [ ] Commit 信息符合格式: `[类型] 简短描述`
+- [ ] Commit 信息符合格式: `type: 简短描述`
 - [ ] 无 Liquid 语法冲突
 
 ---

@@ -4,7 +4,7 @@
 
 ## 项目简介
 
-A_Bit_S Blog 是团队的技术内容发布平台，基于 Jekyll 构建并部署在 GitHub Pages (`https://wzxzhuxi.github.io/`)。
+A_Bit_S Blog 是团队的技术内容发布平台，基于 Jekyll 构建并部署在 GitHub Pages (`https://a-bit-s.github.io/`)。
 
 支持文章、书籍(多章节长文)两种内容形式，采用统一的作者数据管理系统，实现多人协作发布。
 
@@ -271,21 +271,24 @@ PDF 文件存放位置: `assets/docs/`
 
 ## Git 提交规范
 
+采用 [Conventional Commits](https://www.conventionalcommits.org/) 规范:
+
 ```bash
 # 格式
-[类型] 简短描述
+type: 简短描述
 
 # 类型标签
-[feat]     # 新增内容(文章、书籍、功能)
-[fix]      # 修复错误(链接、格式、拼写)
-[docs]     # 文档更新
-[style]    # 样式调整
-[refactor] # 重构
-[chore]    # 杂项
+feat:     # 新增内容(文章、书籍、功能)
+fix:      # 修复错误(链接、格式、拼写)
+docs:     # 文档更新
+style:    # 样式调整
+refactor: # 重构
+chore:    # 杂项(配置、依赖等)
 
 # 示例
-git commit -m "[feat] 添加文章: Rust 所有权详解"
-git commit -m "[fix] 修正图片链接错误"
+git commit -m "feat: 添加文章 Rust 所有权详解"
+git commit -m "fix: 修正图片链接错误"
+git commit -m "chore: 更新站点 URL"
 ```
 
 ## 部署
@@ -294,7 +297,7 @@ git commit -m "[fix] 修正图片链接错误"
 
 1. 推送到 `main` 分支
 2. GitHub Actions 自动构建
-3. 发布到 `https://wzxzhuxi.github.io/`
+3. 发布到 `https://a-bit-s.github.io/`
 
 **注意**:
 - `_site/` 目录是构建输出,已被 `.gitignore` 排除

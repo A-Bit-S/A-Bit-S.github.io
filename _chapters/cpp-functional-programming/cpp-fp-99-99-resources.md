@@ -239,7 +239,7 @@ auto result = fplus::transform(
 ## 联系方式
 
 - **作者**: Zhuxi
-- **博客**: [A_Bit_S Blog](https://wzxzhuxi.github.io/)
+- **博客**: [A_Bit_S Blog](https://a-bit-s.github.io/)
 - **GitHub**: [@wzxzhuxi](https://github.com/wzxzhuxi)
 
 ---
