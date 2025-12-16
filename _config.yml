@@ -4,9 +4,9 @@ description: 愿你的生命如花朵般绽放
 author: A_Bit_S Team
 
 # GitHub Pages specific settings
-# Hosting at https://wzxzhuxi.github.io with no base prefix
+# Hosting at https://a-bit-s.github.io with no base prefix
 baseurl: "" # user/organization pages keep this empty
-url: "https://wzxzhuxi.github.io"
+url: "https://a-bit-s.github.io"
 
 # Build settings
 markdown: kramdown
